@@ -10,8 +10,11 @@ const Todo = () => {
     ]);
 
     const addTask = (title) => {
-        const newTask = [...tasks, {title}];
-        setTask(newTask);
+        if(title.trim() !== ""){
+            const newTask = [...tasks, {title}];
+            setTask(newTask);
+        }
+
     }
 
     const removeTask = (index) => {
